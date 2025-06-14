@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeQuotes.MainPage">
+
+    <Grid x:Name="background">
+
+        <Grid.Background>
+            
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                
+                <GradientStopCollection>
+
+                    <GradientStop Color="#051937" Offset="0.0" />
+                    <GradientStop Color="#004d7a" Offset="0.25" />
+                    <GradientStop Color="#008793" Offset="0.50" />
+                    <GradientStop Color="#00bf72" Offset="0.75" />
+                    <GradientStop Color="#a8eb12" Offset="1" />
+
+                </GradientStopCollection>
+                
+            </LinearGradientBrush>
+            
+        </Grid.Background>
+
+        <Grid Margin="25" RowDefinitions=".8*,.2*">
+
+            <Label x:Name="quote"
+                   Grid.Row="0"
+                   Text="They do not amke bugs like Bunny anymore."
+                   FontSize="50"
+                   FontFamily="MainFont"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"/>
+
+            <Button x:Name="btnGenerateQuote"
+                    Grid.Row="1"
+                    BackgroundColor="Black"
+                    Text="Get New Quote"
+                    Opacity=".4"
+                    TextColor="White" 
+                    Clicked="btnGenerateQuote_Clicked"/>
+
+        </Grid>
+        
+    </Grid>
+
+</ContentPage>
